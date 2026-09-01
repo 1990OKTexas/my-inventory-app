@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Inventory Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fixed Top-Center Search Header -->
+    <header class="search-header">
+        <input type="text" id="searchInput" placeholder="Search inventory by name...">
+    </header>
+
+    <main class="container">
+        <!-- Add Item Form -->
+        <section class="upload-section">
+            <h2>Add New Item</h2>
+            <div class="form-group">
+                <label for="itemImage">Upload Image</label>
+                <input type="file" id="itemImage" accept="image/*">
+            </div>
+            <div class="form-group">
+                <input type="text" id="itemName" placeholder="Name item">
+            </div>
+            <div class="form-group">
+                <textarea id="itemDetails" placeholder="Add details..." rows="3"></textarea>
+            </div>
+            <button id="addItemBtn">Add Item</button>
+        </section>
+
+        <!-- Inventory Catalog Display -->
+        <section class="inventory-section">
+            <h2>My Catalog</h2>
+            <div id="inventoryList" class="inventory-grid"></div>
+        </section>
+    </main>
+
+    <!-- Modal Popup for Full Item View -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modalImage" src="" alt="Item Image">
+            <h2 id="modalName"></h2>
+            <p id="modalDetails"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
